@@ -1,4 +1,4 @@
-const jobsData = [
+const jobsDataa = [
   {
     id: 0,
     title: "Pessoa desenvolvedora front-end - React",

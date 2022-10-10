@@ -1,0 +1,70 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    padding: 0 20px;
+}
+
+@media(min-width: 375px){
+    header {
+    padding: 50px 0 0 60px;
+    }
+    
+}
+
+.vacancy-title {
+    margin-bottom: 27px;
+}
+
+.vacancy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media(min-width: 375px) {
+    section {
+        padding-left: 60px;
+        max-width: 900px;
+    }
+}
+
+.feed-cards {
+    width: 90%;
+    height: fit-content;
+    padding: 0 20px 20px 20px;
+    border-radius: var(--radius-default);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: var(--color-grey-6);
+}
+
+.feed-cards-header {
+    display: flex;
+    gap: 30px;
+}
+
+.feed-cards-header p {
+    font-size: var(--text-3);
+}
+
+.feed-place-box {
+    width: fit-content;
+    height: fit-content;
+    padding: 3px 5px;
+    border-radius: var(--radius-default);
+    background-color: var(--color-grey-3);
+}
+
+.feed-place-box p {
+    font-size: var(--text-3);
+}
+
+.feed-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}

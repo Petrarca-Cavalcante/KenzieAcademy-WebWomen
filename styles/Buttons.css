@@ -1,0 +1,29 @@
+.header-btn {
+    margin-top: 35px;
+    width: 255px;
+    height: 40px;
+    background-color: var(--color-brand-1);
+    border: 2px solid var(--color-brand-1);
+    border-radius: var(--radius-default);
+    color: var(--color-grey-6);
+    font-size: var(--text-3);
+    font-weight: var(--text-5);
+}
+
+.card-try-buttons {
+    font-family: "Poppins", sans-serif;
+    color: var(--color-grey-6);
+    background-color: var(--color-brand-1);
+    border: 1px solid var(--color-brand-1);
+    border-radius: var(--radius-default);
+    width: 90%;
+    height: fit-content;
+    padding: 6px 0;
+    align-self: center;
+}
+
+.delete-try-card {
+    width: 32px;
+    height: 32px;
+    border: 1px solid transparent;
+}

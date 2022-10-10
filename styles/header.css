@@ -1,0 +1,77 @@
+header {
+    min-height: 100vh;
+}
+@media(min-width: 375px){
+    header{
+        height: 100vh;
+        
+    }    
+}
+
+.header-img-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    background: url(/assets/img/Desktop_Background.jpg);
+    filter: brightness(35%);
+}
+@media(min-width: 375px){
+    .header-img {
+        min-width: 100%;
+        background: url(/assets/img/Mobile_Background.png);
+    }
+}
+
+
+
+
+/* @media(min-width: 370px) {
+    .header-img {
+        background-image: url('/assets/img/Desktop_Background.jpg');
+    }
+} */
+
+.header-wrapper {
+    padding: 25px 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-title {
+    margin: 0 0 15px;
+}
+
+.header-title h1 {
+    color: var(--color-grey-6);
+}
+
+@media(min-width: 375px){
+    .header-title h1 {
+        font-size: var(--title-4);
+    }
+}
+
+
+.subtitle-wrapper {
+    margin-bottom: 30px;
+}
+.header-subtitle {
+    color: var(--color-grey-6);
+    font-size: var(--title-3);
+    font-weight: var(--text-2);
+}
+
+
+.header-text-wrapper {
+    margin-bottom: 35px;
+}
+.header-text {
+    color: var(--color-grey-5);
+    font-size: var(--title-5);
+    font-weight: 1px;
+}
+

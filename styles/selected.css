@@ -1,0 +1,30 @@
+.vacancy-trial {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.vacancy-list-tried {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.try-card {
+    width: 90%;
+    height: fit-content;
+    max-width: 350px;
+    background-color: var(--color-grey-5);
+    border-radius: var(--radius-default);
+    padding: 15px 10px;
+}
+
+.try-card-header {
+    display: flex;
+}
+
+.trial-infos {
+    display: flex;
+    gap: 20px;
+}
