@@ -13,25 +13,17 @@ header {
     width: 100%;
     overflow: hidden;
     position: absolute;
-    z-index: -1;
     background: url(/assets/img/Desktop_Background.jpg);
+    z-index: -1;
     filter: brightness(35%);
 }
 @media(min-width: 375px){
     .header-img {
         min-width: 100%;
         background: url(/assets/img/Mobile_Background.png);
+        background-repeat: no-repeat;
     }
 }
-
-
-
-
-/* @media(min-width: 370px) {
-    .header-img {
-        background-image: url('/assets/img/Desktop_Background.jpg');
-    }
-} */
 
 .header-wrapper {
     padding: 25px 20px;

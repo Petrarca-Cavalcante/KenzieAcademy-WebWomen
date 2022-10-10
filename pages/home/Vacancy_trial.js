@@ -1,21 +1,24 @@
 const trialBox = document.querySelector('.vacancy-trial')
 const vacancyTried = document.querySelector('.vacancy-list-tried')
-const tryCardBtn = document.querySelector('.card-try-buttons')
+const tryCardBtn = document.querySelectorAll('.card-try-buttons')
 let saveSubmited = []
 
-function submitedVacancies(i, arr){
+function submitedVacancies(button){
 
     vacancyTried.innerText = ""
-    arr.forEach(element => {
+    saveSubmited.forEach((element, i) => {
         const tryCard = document.createElement('li') 
         
+
         const header = document.createElement('div')
         const title  = document.createElement('h4')
         const remove = document.createElement('button')
         const trashIco = document.createElement('img')
         remove.addEventListener('click', (event) => {
             event.preventDefault()
-            saveSubmited.splice(i, 1)
+            saveSubmited.splice(i, 1) 
+            console.log(saveSubmited)
+            button.innerText = "Candidatar"
             tryCard.remove()
         })
 

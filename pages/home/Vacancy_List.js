@@ -1,6 +1,6 @@
 const jobsData = [
     {
-      id: 1,
+      id: 0,
       title: "Pessoa desenvolvedora front-end - React",
       enterprise: "Kenzie",
       location: "Curitiba",
@@ -9,7 +9,7 @@ const jobsData = [
       modalities: "Presencial",
     },
     {
-      id: 2,
+      id: 1,
       title: "Pessoa desenvolvedora back-end - Node JS",
       enterprise: "Brazilians in Tech",
       location: "Rio de Janeiro",
@@ -18,7 +18,7 @@ const jobsData = [
       modalities: "Home Office",
     },
     {
-      id: 3,
+      id: 2,
       title: "Pessoa desenvolvedora Fullstack - Node JS",
       enterprise: "Brazilians in Tech",
       location: "Rio de Janeiro",
@@ -64,11 +64,12 @@ function renderVacancy(vacancyArr){
             if(tryBtn.innerText == "Candidatar"){
                 tryBtn.innerText = "Remover candidatura"
                 saveSubmited.unshift(i)
-                submitedVacancies(element, saveSubmited)
+                submitedVacancies(tryBtn)
             } else {
                 tryBtn.innerText = "Candidatar"
-                saveSubmited.indexOf()
-                submitedVacancies(element, saveSubmited)          
+                let random = saveSubmited.findIndex(e => e === element.id)
+                saveSubmited.splice(random, 1)
+                submitedVacancies(tryBtn)          
             }
         })
 
