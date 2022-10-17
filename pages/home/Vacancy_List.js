@@ -27,7 +27,7 @@ const jobsData = [
       modalities: "Home Office",
     },
   ];
-  
+
 
 let vacancyList = document.querySelector('.vacancy-list')
 
@@ -64,12 +64,12 @@ function renderVacancy(vacancyArr){
             if(tryBtn.innerText == "Candidatar"){
                 tryBtn.innerText = "Remover candidatura"
                 saveSubmited.unshift(i)
-                submitedVacancies(tryBtn)
+                submitedVacancies(tryBtn, element.id)
             } else {
                 tryBtn.innerText = "Candidatar"
                 let random = saveSubmited.findIndex(e => e === element.id)
                 saveSubmited.splice(random, 1)
-                submitedVacancies(tryBtn)          
+                submitedVacancies(tryBtn, element.id)          
             }
         })
 

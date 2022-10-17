@@ -1,30 +1,35 @@
 const trialBox = document.querySelector('.vacancy-trial')
 const vacancyTried = document.querySelector('.vacancy-list-tried')
-const tryCardBtn = document.querySelectorAll('.card-try-buttons')
+const tryCardBtn = document.getElementsByClassName('card-try-buttons')
+
 let saveSubmited = []
 
-function submitedVacancies(button){
+function submitedVacancies(button, id) {
 
     vacancyTried.innerText = ""
     saveSubmited.forEach((element, i) => {
-        const tryCard = document.createElement('li') 
-        
+    saveInMachine = saveSubmited
+        const tryCard = document.createElement('li')
 
         const header = document.createElement('div')
-        const title  = document.createElement('h4')
+        const title = document.createElement('h4')
         const remove = document.createElement('button')
         const trashIco = document.createElement('img')
         remove.addEventListener('click', (event) => {
+
             event.preventDefault()
-            saveSubmited.splice(i, 1) 
-            console.log(saveSubmited)
-            button.innerText = "Candidatar"
+            let random = saveSubmited.findIndex(e => e === id)
+            saveSubmited.splice(random, 1)
+            let zombie = saveSubmited.splice(random, 1)
+            persistantData(zombie)
+
+            tryCardBtn[element].innerText = "Candidatar"
             tryCard.remove()
         })
 
         const infos = document.createElement('div')
         const tryEnterprise = document.createElement('p')
-        const tryCity  = document.createElement('p')
+        const tryCity = document.createElement('p')
 
         tryCard.classList.add("try-card")
         header.classList.add("try-card-header")
@@ -42,5 +47,13 @@ function submitedVacancies(button){
         infos.append(tryEnterprise, tryCity)
         tryCard.append(header, infos)
         vacancyTried.append(tryCard)
+        
     });
+}
+
+function persistantData(brain) {
+    let saveInMachine = JSON.stringify(brain)
+    localStorage.setItem("saveSubmited", saveInMachine)
+    
+    let welcomeback =   localStorage.getItem("saveSubmited")
 }
